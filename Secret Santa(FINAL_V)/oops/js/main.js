@@ -164,7 +164,7 @@ function santaSearch() {
 }
 
 function postData(sugar, data, space = false) {
-  const url = `https://localhost:8081/api/v001/${ sugar }`;
+  const url = `https://cft-secret-santa-back.herokuapp.com/api/v001/${ sugar }`;
   if (space) {
     return fetch(`${ url }`, {
       method: 'POST',
@@ -185,7 +185,7 @@ function postData(sugar, data, space = false) {
 }
 
 function getData(sugar) {
-  const url = `https://localhost:8081/api/v001/${ sugar }`;
+  const url = `https://cft-secret-santa-back.herokuapp.com/api/v001/${ sugar }`;
   return fetch(`${ url }`)
     .then(data => data.json())
     .then(response => response)
